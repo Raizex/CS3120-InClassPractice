@@ -9,6 +9,7 @@ echo "Name: Justin Huffman" >> output.txt
 echo "Date: $(date)" >> output.txt
 echo "Class: Machine Learning" >> output.txt
 echo "Assignment: In Class Practice $1" >> output.txt
+echo "Source code: https://github.com/$(git config remote.origin.url | cut -f 2 -d ':' | cut -f 1 -d '.')/tree/master/$1" >> output.txt
 echo "" >> output.txt
 
 # Execution code modified from https://stackoverflow.com/a/10523501
