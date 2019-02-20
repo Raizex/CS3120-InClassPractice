@@ -4,7 +4,10 @@ import matplotlib.pyplot as plt
 
 data = pd.read_csv('banking.csv')
 
+marital_data = pd.DataFrame()
+
 for status in data['marital'].unique():
     marital = data.loc[data['marital']==status]['y'].value_counts()
-    print(status)
-    print(marital,'\n')
+    marital_data[status] = marital
+
+print(marital_data)
