@@ -11,3 +11,8 @@ for status in data['marital'].unique():
     marital_data[status] = marital
 
 print(marital_data)
+
+frequencies = marital_data.iloc[1] / (marital_data.iloc[0] + marital_data.iloc[1])
+marital_frequencies = pd.DataFrame(frequencies, columns=['f']).T
+
+print(marital_frequencies)
