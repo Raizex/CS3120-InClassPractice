@@ -18,3 +18,4 @@ marital_frequencies = pd.DataFrame(frequencies, columns=['f']).T
 print(marital_frequencies)
 
 marital_frequencies.T.plot.bar()
+marital_data.T.plot.bar(stacked=True)
